@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/Biblioteca/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2555" />
         <entry key="..\:/android/Biblioteca/app/src/main/res/layout/activity_book_list.xml" value="0.2359375" />
         <entry key="..\:/android/Biblioteca/app/src/main/res/layout/activity_book_store.xml" value="0.25" />
         <entry key="..\:/android/Biblioteca/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/android/Biblioteca/app/src/main/res/layout/fragment_book_details.xml" value="0.25" />
         <entry key="..\:/android/Biblioteca/app/src/main/res/layout/fragment_book_list.xml" value="0.2359375" />
+        <entry key="..\:/android/Biblioteca/app/src/main/res/layout/list_item_book.xml" value="0.24895833333333334" />
       </map>
     </option>
   </component>

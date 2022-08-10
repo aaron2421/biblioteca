@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
-    tools:context=".BookDetailsFragment" />
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".BookDetailsFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/bookstore" />
+
+    <EditText
+        android:id="@+id/titleForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Titulo"
+        android:inputType="text|textCapWords"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/authorForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Autor"
+        android:inputType="textPersonName|textCapWords"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/editorialForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Editorial"
+        android:inputType="textCapWords"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/yearForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Año"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/saveBookButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+</LinearLayout>

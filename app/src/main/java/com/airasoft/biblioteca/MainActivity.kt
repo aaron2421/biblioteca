@@ -15,5 +15,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, BookStoreActivity::class.java)
         startActivity(intent)
         finish()
+
+        //buenas tardes
     }
 }
