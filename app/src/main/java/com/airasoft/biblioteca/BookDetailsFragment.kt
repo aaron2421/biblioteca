@@ -24,6 +24,8 @@ class BookDetailsFragment : Fragment() {
     lateinit var author: String
     lateinit var editorial: String
     var year: Int = 0
+    var price: Int = 0
+    lateinit var category: String
 
     val args: BookDetailsFragmentArgs by navArgs()
 
@@ -42,6 +44,8 @@ class BookDetailsFragment : Fragment() {
             binding.authorForm.setText(args.bookData.bookAuthor)
             binding.editorialForm.setText(args.bookData.bookEditorial)
             binding.yearForm.setText(args.bookData.bookYear.toString())
+            binding.priceForm.setText(args.bookData.bookPrice.toString())
+            binding.categoryForm.setText(args.bookData.bookCategory)
         }
 
         binding.saveBookButton.setOnClickListener {
@@ -49,14 +53,16 @@ class BookDetailsFragment : Fragment() {
             author = binding.authorForm.text.toString()
             editorial = binding.editorialForm.text.toString()
             year = binding.yearForm.text.toString().toInt()
+            price = binding.priceForm.text.toString().toInt()
+            category = binding.categoryForm.text.toString()
 
             val book: Book
 
             if (args.isNewBook) {
-                book = Book(title, author, editorial, year)
+                book = Book(title, author, editorial, year, price, category)
                 dataSource.insert(book)
             } else {
-                book = Book(title, author, editorial, year, args.bookData.bookId)
+                book = Book(title, author, editorial, year, price, category, args.bookData.bookId)
                 dataSource.update(book)
             }
 

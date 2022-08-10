@@ -18,6 +18,10 @@ data class Book(
     var bookEditorial: String,
     @ColumnInfo(name = "book_year")
     var bookYear: Int,
+    @ColumnInfo(name = "book_price")
+    var bookPrice: Int,
+    @ColumnInfo(name = "book_category")
+    var bookCategory: String,
     @PrimaryKey(autoGenerate = true)
     var bookId: Long = 0L
 ): Parcelable

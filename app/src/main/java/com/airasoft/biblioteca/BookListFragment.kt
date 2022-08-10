@@ -38,7 +38,8 @@ class BookListFragment : Fragment(), SearchView.OnQueryTextListener {
         recycler.adapter = adapter
 
         binding.addBookButton.setOnClickListener {
-            val action = BookListFragmentDirections.actionBookListFragmentToBookDetailsFragment(true, Book("", "", "", 0))
+            val action = BookListFragmentDirections
+                .actionBookListFragmentToBookDetailsFragment(true, Book("", "", "", 0, 0, ""))
             it.findNavController().navigate(action)
         }
 
