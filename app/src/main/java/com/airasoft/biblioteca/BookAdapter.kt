@@ -43,7 +43,8 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
                 .show()
         }
         holder.updateBookButton.setOnClickListener {
-            val action = BookListFragmentDirections.actionBookListFragmentToBookDetailsFragment(false, Book(item.bookTitle, item.bookAuthor, item.bookEditorial, item.bookYear, item.bookId))
+            val action = BookListFragmentDirections
+                .actionBookListFragmentToBookDetailsFragment(false, Book(item.bookTitle, item.bookAuthor, item.bookEditorial, item.bookYear, item.bookPrice, item.bookCategory, item.bookId))
             it.findNavController().navigate(action)
         }
     }

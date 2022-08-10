@@ -50,10 +50,30 @@
         android:id="@+id/yearForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Año"
         android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/priceForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Precio"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/categoryForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Categoría"
+        android:inputType="textCapWords"
         android:minHeight="48dp" />
 
     <Button
