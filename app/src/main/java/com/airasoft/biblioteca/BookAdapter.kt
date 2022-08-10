@@ -31,6 +31,9 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = books[position]
         holder.bookTitle.text = item.bookTitle
+        holder.bookAuthor.text = item.bookAuthor
+        holder.bookEditorial.text = item.bookEditorial
+        holder.bookYear.text = item.bookYear.toString()
         holder.deleteBookButton.setOnClickListener {
             MaterialAlertDialogBuilder(it.context)
                 .setMessage("¿Esta seguro que desea borrar el libro?")
@@ -52,6 +55,9 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val bookTitle: TextView = itemView.findViewById(R.id.bookTitleTextView)
+        val bookAuthor: TextView = itemView.findViewById(R.id.bookAuthorTextView)
+        val bookEditorial: TextView = itemView.findViewById(R.id.bookEditorialTextView)
+        val bookYear: TextView = itemView.findViewById(R.id.bookYearTextView)
         val deleteBookButton: Button = itemView.findViewById(R.id.deleteBookButton)
         val updateBookButton: Button = itemView.findViewById(R.id.updateBookButton)
     }
