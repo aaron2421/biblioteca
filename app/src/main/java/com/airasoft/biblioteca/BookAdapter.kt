@@ -40,6 +40,7 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
                 .setNegativeButton("No") { _, _ -> }
                 .setPositiveButton("Si") { _, _ ->
                     dataSource.deleteBook(item.bookTitle)
+                    notifyDataSetChanged()
                     Snackbar.make(it, "Libro eliminado.", Snackbar.LENGTH_SHORT).show()
                     it.findNavController().navigate(R.id.action_bookListFragment_self)
                 }
@@ -68,6 +69,7 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
         if(query!!.isEmpty()) {
             books = emptyList()
             books = dataSource.getAllBooks()
+            notifyDataSetChanged()
         } else {
             val filteredData: Stream<Book> = books.stream()
                 .filter { i -> i.bookTitle.lowercase().contains(query.lowercase()) ||
@@ -76,6 +78,7 @@ class BookAdapter(private var books: List<Book>, dao: BookStoreDatabaseDao): Rec
                                i.bookYear.toString().contains(query) }
             books = emptyList()
             books = filteredData.toList()
+            notifyDataSetChanged()
         }
     }
 }
